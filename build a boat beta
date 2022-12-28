@@ -1,5 +1,5 @@
 
-
+getgenv().AutoUnbox = true;
 getgenv().AutoFarm = true;
 getgenv().AutoFarmGoldBlocks = true;
 local Minigun = game.Players.LocalPlayer.Data.MiniGun.Value
@@ -4498,6 +4498,19 @@ Tab:AddToggle({
     
 })
 
+Tab:AddToggle({
+	Name = "Auto Unbox COMMON chest ",
+	Default = (bool),
+	Callback = function(bool)
+		getgenv().AutoUnbox = bool
+		print(bool)
+		if bool then
+		AutoUnbox()
+		end
+	end    
+    
+})
+
 
 function AutoFarm()
 while getgenv().AutoFarm == true do
@@ -4538,5 +4551,16 @@ while getgenv().AutoFarmGoldBlocks == true do
         wait(0.5)
 chara.HumanoidRootPart.CFrame = CFrame.new(-56.1324272, -359.141205, 9490.19336, -0.999418378, 0.0338956974, 0.0037424101, 0.033853177, 0.999367416, -0.0108940192, -0.004109303, -0.0107609909, -0.99993366)
 wait(19)
+end
+end
+
+function AutoUnbox()
+    while getgenv().AutoUnbox == true do
+local args = {
+    [1] = "Common Chest",
+    [2] = 1
+}
+
+workspace.ItemBoughtFromShop:InvokeServer(unpack(args))
 end
 end
