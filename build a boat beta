@@ -1,16 +1,18 @@
-
+getgenv().SpamTeams = true;
 getgenv().AutoUnbox = true;
+getgenv().SpamWhite = true;
 getgenv().AutoFarm = true;
 getgenv().AutoFarmGoldBlocks = true;
 local Minigun = game.Players.LocalPlayer.Data.MiniGun.Value
 local Button = game.Players.LocalPlayer.Data.Button.Value
 local Wood = game.Players.LocalPlayer.Data.WoodBlock.Value
 local HowCannon = game.Players.LocalPlayer.Data.Cannon.Value
+local Brick = game.Players.LocalPlayer.Data.BrickBlock.Value
 print(" Player has "..Wood.." wood")
 print(" Player has "..HowCannon.." Cannons ")
 print (" Player has "..Button.." buttons")
 print (" Player has "..Minigun.." Miniguns")
-
+print (" Player has "..Brick.." Bricks")
 
 
 
@@ -42,15 +44,37 @@ local Window = OrionLib:MakeWindow({Name = "build a boat --by jude/rev", HidePre
 getgenv().Cannon = true;
 local Tab = Window:MakeTab({
 	Name = "Auto build",
-	Icon = "rbxassetid://4483345998",
+	Icon = "rbxassetid://10732694360",
 	PremiumOnly = false
 })
 
 
+
 local Section = Tab:AddSection({
-	Name = "Auto build-re-execute if u get more of the block"
+	Name = "Auto build"
 })
 Tab:AddParagraph("READ ME","Format will be as so:  'build'[how many blocks u need], most will be wood")
+
+Tab:AddParagraph("READ ME","If you get more blocks,Re-execute to fix autobuild")
+
+
+
+
+
+Tab:AddButton({
+	Name = "Buy 50 blocks of wood [250 gold]",
+	Callback = function()
+local args = {
+    [1] = "WoodBlock",
+    [2] = 1
+}
+
+workspace.ItemBoughtFromShop:InvokeServer(unpack(args))
+end
+})  
+
+
+
 
 Tab:AddButton({
 	Name = "penis [309 wood]",
@@ -59,6 +83,142 @@ NUT1()
 
 end
 })  
+
+
+
+
+
+
+
+Tab:AddButton({
+	Name = "small penis [5 wood]",
+	Callback = function()
+	    OrionLib:MakeNotification({
+	Name = "ALERT",
+	Content = "Keep build tool out",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+OrionLib:MakeNotification({
+	Name = "Progress",
+	Content = "Starting To Build...",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+
+	     local lp = game:GetService("Players").LocalPlayer
+        local Backpack = game.Players.LocalPlayer.Backpack
+        local chara = game.Players.LocalPlayer.Character
+        local origin = chara.HumanoidRootPart.CFrame
+        
+        for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+                if v:IsA'Tool' then
+                    v.Parent = game.Players.LocalPlayer.Backpack;
+                end;
+        end; 
+        
+        wait(0.2)
+            local Tool = "BuildingTool" 
+            chara.Humanoid:EquipTool(Backpack[Tool])
+   
+   
+   
+    
+    
+    wait(0.3)
+    
+local args = {
+    [1] = "WoodBlock",
+    [2] = Wood,
+    [3] = workspace[plrteam()],
+    [4] = CFrame.new(25, 6.100000381469727, 45) * CFrame.Angles(-0, 0, -0),
+    [5] = true,
+    [6] = 1,
+    [7] = CFrame.new(-283.9656677246094, -11.899991989135742, -97.10684967041016) * CFrame.Angles(0, 1.5707963705062866, 0),
+    [8] = false
+}
+
+game:GetService("Players").LocalPlayer.Character.BuildingTool.RF:InvokeServer(unpack(args))
+local args = {
+    [1] = "WoodBlock",
+    [2] = Wood,
+    [3] = workspace[plrteam()],
+    [4] = CFrame.new(21, 6.100000381469727, 45) * CFrame.Angles(-0, 0, -0),
+    [5] = true,
+    [6] = 1,
+    [7] = CFrame.new(-283.9656677246094, -11.899991989135742, -93.10684967041016) * CFrame.Angles(0, 1.5707963705062866, 0),
+    [8] = false
+}
+
+game:GetService("Players").LocalPlayer.Character.BuildingTool.RF:InvokeServer(unpack(args))
+local args = {
+    [1] = "WoodBlock",
+    [2] = Wood,
+    [3] = workspace[plrteam()],
+    [4] = CFrame.new(23, 8.100000381469727, 45) * CFrame.Angles(-0, 0, -0),
+    [5] = true,
+    [6] = 1,
+    [7] = CFrame.new(-283.9656677246094, -11.899991989135742, -95.10684967041016) * CFrame.Angles(0, 1.5707963705062866, 0),
+    [8] = false
+}
+
+game:GetService("Players").LocalPlayer.Character.BuildingTool.RF:InvokeServer(unpack(args))
+local args = {
+    [1] = "WoodBlock",
+    [2] = Wood,
+    [3] = workspace[plrteam()],
+    [4] = CFrame.new(23, 10.100000381469727, 45) * CFrame.Angles(-0, 0, -0),
+    [5] = true,
+    [6] = 1,
+    [7] = CFrame.new(-283.9656677246094, -11.899991989135742, -95.10684967041016) * CFrame.Angles(0, 1.5707963705062866, 0),
+    [8] = false
+}
+
+game:GetService("Players").LocalPlayer.Character.BuildingTool.RF:InvokeServer(unpack(args))
+local args = {
+    [1] = "WoodBlock",
+    [2] = Wood,
+    [3] = workspace[plrteam()],
+    [4] = CFrame.new(23, 12.100000381469727, 45) * CFrame.Angles(-0, 0, -0),
+    [5] = true,
+    [6] = 1,
+    [7] = CFrame.new(-283.9656677246094, -11.899991989135742, -95.10684967041016) * CFrame.Angles(0, 1.5707963705062866, 0),
+    [8] = false
+}
+
+game:GetService("Players").LocalPlayer.Character.BuildingTool.RF:InvokeServer(unpack(args))
+local args = {
+    [1] = "WoodBlock",
+    [2] = Wood,
+    [3] = workspace[plrteam()],
+    [4] = CFrame.new(23, 14.100000381469727, 45) * CFrame.Angles(-0, 0, -0),
+    [5] = true,
+    [6] = 1,
+    [7] = CFrame.new(-283.9656677246094, -11.899991989135742, -95.10684967041016) * CFrame.Angles(0, 1.5707963705062866, 0),
+    [8] = false
+}
+
+game:GetService("Players").LocalPlayer.Character.BuildingTool.RF:InvokeServer(unpack(args))
+
+OrionLib:MakeNotification({
+	Name = "Progress",
+	Content = "Done Building...",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+
+ for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+                if v:IsA'Tool' then
+                    v.Parent = game.Players.LocalPlayer.Backpack;
+                end;
+        end;
+
+end
+})  
+
+
+
+
 
 function NUT1()
 
@@ -4310,6 +4470,15 @@ OrionLib:MakeNotification({
 end
 
 Tab:AddButton({
+	Name = "Build my name [31 wood]",
+	Callback = function()
+Jude()
+
+end
+})  
+
+
+Tab:AddButton({
 	Name = "Op cannon [50 cannons]",
 	Callback = function()
 	        local lp = game:GetService("Players").LocalPlayer
@@ -4435,7 +4604,6 @@ game:GetService("Players").LocalPlayer.Character.BuildingTool.RF:InvokeServer(un
 
 
 end
--- Script generated by SimpleSpy - credits to exx#9394
 
 local args = {
     [1] = "Button",
@@ -4465,13 +4633,314 @@ OrionLib:MakeNotification({
 })
 end
 
+Tab:AddButton({
+	Name = "Tiddies [16 wood][2 bricks]",
+	Callback = function()
+	             OrionLib:MakeNotification({
+	Name =  "WARNING",
+	Content = "Dont unequip build tool",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+
+        OrionLib:MakeNotification({
+	Name =  "progress...",
+	Content = "Starting to build..",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+	     local lp = game:GetService("Players").LocalPlayer
+        local Backpack = game.Players.LocalPlayer.Backpack
+        local chara = game.Players.LocalPlayer.Character
+        local origin = chara.HumanoidRootPart.CFrame
+	     
+	     for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+                if v:IsA'Tool' then
+                    v.Parent = game.Players.LocalPlayer.Backpack;
+                end;
+        end; 
+        
+        wait(0.2)
+            local Tool = "BuildingTool" -- Tool name in your backpack.
+            chara.Humanoid:EquipTool(Backpack[Tool])
+            wait(0.2)
+local args = {
+    [1] = "WoodBlock",
+    [2] = Wood,
+    [3] = workspace:FindFirstChild(plrteam()),
+    [4] = CFrame.new(53, 6.100000381469727, 135) * CFrame.Angles(-0, 0, -0),
+    [5] = true,
+    [6] = 1,
+    [7] = CFrame.new(86.83432006835938, -11.899991989135742, 342.4931945800781) * CFrame.Angles(-0, -1.5707963705062866, 0),
+    [8] = false
+}
+
+game:GetService("Players").LocalPlayer.Character.BuildingTool.RF:InvokeServer(unpack(args))
+
+local args = {
+    [1] = "WoodBlock",
+    [2] = Wood,
+    [3] = workspace:FindFirstChild(plrteam()),
+    [4] = CFrame.new(53, 8.100000381469727, 135) * CFrame.Angles(-0, 0, -0),
+    [5] = true,
+    [6] = 1,
+    [7] = CFrame.new(86.83432006835938, -11.899991989135742, 342.4931945800781) * CFrame.Angles(-0, -1.5707963705062866, 0),
+    [8] = false
+}
+
+game:GetService("Players").LocalPlayer.Character.BuildingTool.RF:InvokeServer(unpack(args))
+
+local args = {
+    [1] = "WoodBlock",
+    [2] = Wood,
+    [3] = workspace:FindFirstChild(plrteam()),
+    [4] = CFrame.new(53, 10.100000381469727, 135) * CFrame.Angles(-0, 0, -0),
+    [5] = true,
+    [6] = 1,
+    [7] = CFrame.new(86.83432006835938, -11.899991989135742, 342.4931945800781) * CFrame.Angles(-0, -1.5707963705062866, 0),
+    [8] = false
+}
+
+game:GetService("Players").LocalPlayer.Character.BuildingTool.RF:InvokeServer(unpack(args))
+
+local args = {
+    [1] = "WoodBlock",
+    [2] = Wood,
+    [3] = workspace:FindFirstChild(plrteam()),
+    [4] = CFrame.new(51, 6.100000381469727, 135) * CFrame.Angles(-0, 0, -0),
+    [5] = true,
+    [6] = 1,
+    [7] = CFrame.new(86.83432006835938, -11.899991989135742, 340.4931945800781) * CFrame.Angles(-0, -1.5707963705062866, 0),
+    [8] = false
+}
+
+game:GetService("Players").LocalPlayer.Character.BuildingTool.RF:InvokeServer(unpack(args))
+
+-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "BrickBlock",
+    [2] = Brick,
+    [3] = workspace:FindFirstChild(plrteam()),
+    [4] = CFrame.new(51, 8.100000381469727, 135) * CFrame.Angles(-0, 0, -0),
+    [5] = true,
+    [6] = 1,
+    [7] = CFrame.new(86.83432006835938, -11.899991989135742, 340.4931945800781) * CFrame.Angles(-0, -1.5707963705062866, 0),
+    [8] = false
+}
+
+game:GetService("Players").LocalPlayer.Character.BuildingTool.RF:InvokeServer(unpack(args))
+
+
+local args = {
+    [1] = "WoodBlock",
+    [2] = Wood,
+    [3] = workspace:FindFirstChild(plrteam()),
+    [4] = CFrame.new(51, 10.100000381469727, 135) * CFrame.Angles(-0, 0, -0),
+    [5] = true,
+    [6] = 1,
+    [7] = CFrame.new(86.83432006835938, -11.899991989135742, 340.4931945800781) * CFrame.Angles(-0, -1.5707963705062866, 0),
+    [8] = false
+}
+
+game:GetService("Players").LocalPlayer.Character.BuildingTool.RF:InvokeServer(unpack(args))
+
+
+local args = {
+    [1] = "WoodBlock",
+    [2] = Wood,
+    [3] = workspace:FindFirstChild(plrteam()),
+    [4] = CFrame.new(49, 6.100000381469727, 135) * CFrame.Angles(-0, 0, -0),
+    [5] = true,
+    [6] = 1,
+    [7] = CFrame.new(86.83432006835938, -11.899991989135742, 338.4931945800781) * CFrame.Angles(-0, -1.5707963705062866, 0),
+    [8] = false
+}
+
+game:GetService("Players").LocalPlayer.Character.BuildingTool.RF:InvokeServer(unpack(args))
+
+local args = {
+    [1] = "WoodBlock",
+    [2] = Wood,
+    [3] = workspace:FindFirstChild(plrteam()),
+    [4] = CFrame.new(49, 8.100000381469727, 135) * CFrame.Angles(-0, 0, -0),
+    [5] = true,
+    [6] = 1,
+    [7] = CFrame.new(86.83432006835938, -11.899991989135742, 338.4931945800781) * CFrame.Angles(-0, -1.5707963705062866, 0),
+    [8] = false
+}
+
+game:GetService("Players").LocalPlayer.Character.BuildingTool.RF:InvokeServer(unpack(args))
+
+local args = {
+    [1] = "WoodBlock",
+    [2] = Wood,
+    [3] = workspace:FindFirstChild(plrteam()),
+    [4] = CFrame.new(49, 10.100000381469727, 135) * CFrame.Angles(-0, 0, -0),
+    [5] = true,
+    [6] = 1,
+    [7] = CFrame.new(86.83432006835938, -11.899991989135742, 338.4931945800781) * CFrame.Angles(-0, -1.5707963705062866, 0),
+    [8] = false
+}
+
+game:GetService("Players").LocalPlayer.Character.BuildingTool.RF:InvokeServer(unpack(args))
+
+---------------------------
+--2nd tiddie
+
+local args = {
+    [1] = "WoodBlock",
+    [2] = Wood,
+    [3] = workspace:FindFirstChild(plrteam()),
+    [4] = CFrame.new(45, 6.100000381469727, 135) * CFrame.Angles(-0, 0, -0),
+    [5] = true,
+    [6] = 1,
+    [7] = CFrame.new(86.83432006835938, -11.899991989135742, 342.4931945800781) * CFrame.Angles(-0, -1.5707963705062866, 0),
+    [8] = false
+}
+
+game:GetService("Players").LocalPlayer.Character.BuildingTool.RF:InvokeServer(unpack(args))
+
+local args = {
+    [1] = "WoodBlock",
+    [2] = Wood,
+    [3] = workspace:FindFirstChild(plrteam()),
+    [4] = CFrame.new(45, 8.100000381469727, 135) * CFrame.Angles(-0, 0, -0),
+    [5] = true,
+    [6] = 1,
+    [7] = CFrame.new(86.83432006835938, -11.899991989135742, 342.4931945800781) * CFrame.Angles(-0, -1.5707963705062866, 0),
+    [8] = false
+}
+
+game:GetService("Players").LocalPlayer.Character.BuildingTool.RF:InvokeServer(unpack(args))
+
+local args = {
+    [1] = "WoodBlock",
+    [2] = Wood,
+    [3] = workspace:FindFirstChild(plrteam()),
+    [4] = CFrame.new(45, 10.100000381469727, 135) * CFrame.Angles(-0, 0, -0),
+    [5] = true,
+    [6] = 1,
+    [7] = CFrame.new(86.83432006835938, -11.899991989135742, 342.4931945800781) * CFrame.Angles(-0, -1.5707963705062866, 0),
+    [8] = false
+}
+
+game:GetService("Players").LocalPlayer.Character.BuildingTool.RF:InvokeServer(unpack(args))
+
+local args = {
+    [1] = "WoodBlock",
+    [2] = Wood,
+    [3] = workspace:FindFirstChild(plrteam()),
+    [4] = CFrame.new(43, 6.100000381469727, 135) * CFrame.Angles(-0, 0, -0),
+    [5] = true,
+    [6] = 1,
+    [7] = CFrame.new(86.83432006835938, -11.899991989135742, 340.4931945800781) * CFrame.Angles(-0, -1.5707963705062866, 0),
+    [8] = false
+}
+
+game:GetService("Players").LocalPlayer.Character.BuildingTool.RF:InvokeServer(unpack(args))
+
+-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "BrickBlock",
+    [2] = Brick,
+    [3] = workspace:FindFirstChild(plrteam()),
+    [4] = CFrame.new(43, 8.100000381469727, 135) * CFrame.Angles(-0, 0, -0),
+    [5] = true,
+    [6] = 1,
+    [7] = CFrame.new(86.83432006835938, -11.899991989135742, 340.4931945800781) * CFrame.Angles(-0, -1.5707963705062866, 0),
+    [8] = false
+}
+
+game:GetService("Players").LocalPlayer.Character.BuildingTool.RF:InvokeServer(unpack(args))
+
+
+local args = {
+    [1] = "WoodBlock",
+    [2] = Wood,
+    [3] = workspace:FindFirstChild(plrteam()),
+    [4] = CFrame.new(43, 10.100000381469727, 135) * CFrame.Angles(-0, 0, -0),
+    [5] = true,
+    [6] = 1,
+    [7] = CFrame.new(86.83432006835938, -11.899991989135742, 340.4931945800781) * CFrame.Angles(-0, -1.5707963705062866, 0),
+    [8] = false
+}
+
+game:GetService("Players").LocalPlayer.Character.BuildingTool.RF:InvokeServer(unpack(args))
+
+
+local args = {
+    [1] = "WoodBlock",
+    [2] = Wood,
+    [3] = workspace:FindFirstChild(plrteam()),
+    [4] = CFrame.new(41, 6.100000381469727, 135) * CFrame.Angles(-0, 0, -0),
+    [5] = true,
+    [6] = 1,
+    [7] = CFrame.new(86.83432006835938, -11.899991989135742, 338.4931945800781) * CFrame.Angles(-0, -1.5707963705062866, 0),
+    [8] = false
+}
+
+game:GetService("Players").LocalPlayer.Character.BuildingTool.RF:InvokeServer(unpack(args))
+
+local args = {
+    [1] = "WoodBlock",
+    [2] = Wood,
+    [3] = workspace:FindFirstChild(plrteam()),
+    [4] = CFrame.new(41, 8.100000381469727, 135) * CFrame.Angles(-0, 0, -0),
+    [5] = true,
+    [6] = 1,
+    [7] = CFrame.new(86.83432006835938, -11.899991989135742, 338.4931945800781) * CFrame.Angles(-0, -1.5707963705062866, 0),
+    [8] = false
+}
+
+game:GetService("Players").LocalPlayer.Character.BuildingTool.RF:InvokeServer(unpack(args))
+
+local args = {
+    [1] = "WoodBlock",
+    [2] = Wood,
+    [3] = workspace:FindFirstChild(plrteam()),
+    [4] = CFrame.new(41, 10.100000381469727, 135) * CFrame.Angles(-0, 0, -0),
+    [5] = true,
+    [6] = 1,
+    [7] = CFrame.new(86.83432006835938, -11.899991989135742, 338.4931945800781) * CFrame.Angles(-0, -1.5707963705062866, 0),
+    [8] = false
+}
+
+game:GetService("Players").LocalPlayer.Character.BuildingTool.RF:InvokeServer(unpack(args))
+
+
+	     for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+                if v:IsA'Tool' then
+                    v.Parent = game.Players.LocalPlayer.Backpack;
+                end;
+        end; 
+        
+        OrionLib:MakeNotification({
+	Name =  "progress...",
+	Content = "Done building",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+        
+
+
+
+
+  	end    
+})
+
+
+
+
+
 
 local Tab = Window:MakeTab({
 	Name = "autofarm",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
-})
-
+	})
+	
 Tab:AddToggle({
 	Name = "AutoFarm Gold",
 	Default = (bool),
@@ -4537,7 +5006,7 @@ wait(0.5)
 chara.HumanoidRootPart.CFrame = CFrame.new(-39.4213638, 43.9060669, 8296.41406, 0.817950964, 2.95945046e-08, -0.575287938, -7.49957891e-08, 1, -5.51869235e-08, 0.575287938, 8.82843736e-08, 0.817950964)
 wait(0.5)
 chara.HumanoidRootPart.CFrame = CFrame.new(-56.1324272, -359.141205, 9490.19336, -0.999418378, 0.0338956974, 0.0037424101, 0.033853177, 0.999367416, -0.0108940192, -0.004109303, -0.0107609909, -0.99993366)
-wait(19)
+wait(18.8)
 end
 end
 
@@ -4550,7 +5019,7 @@ while getgenv().AutoFarmGoldBlocks == true do
         chara.HumanoidRootPart.CFrame = CFrame.new(-50.8950272, 20.9255829, 2137.91357, -0.972867966, -3.05006544e-08, 0.231361046, -4.01606641e-08, 1, -3.70432751e-08, -0.231361046, -4.53298306e-08, -0.972867966)
         wait(0.5)
 chara.HumanoidRootPart.CFrame = CFrame.new(-56.1324272, -359.141205, 9490.19336, -0.999418378, 0.0338956974, 0.0037424101, 0.033853177, 0.999367416, -0.0108940192, -0.004109303, -0.0107609909, -0.99993366)
-wait(19)
+wait(18.8)
 end
 end
 
@@ -4562,5 +5031,781 @@ local args = {
 }
 
 workspace.ItemBoughtFromShop:InvokeServer(unpack(args))
+end
+end
+
+function Jude()
+    OrionLib:MakeNotification({
+    Name = "ALERT",
+	Content = "Keep build tool out",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+
+OrionLib:MakeNotification({
+	Name = "Progress",
+	Content = "Starting To Build...",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+
+	     local lp = game:GetService("Players").LocalPlayer
+        local Backpack = game.Players.LocalPlayer.Backpack
+        local chara = game.Players.LocalPlayer.Character
+        local origin = chara.HumanoidRootPart.CFrame
+        
+        for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+                if v:IsA'Tool' then
+                    v.Parent = game.Players.LocalPlayer.Backpack;
+                end;
+        end; 
+        
+        wait(0.2)
+            local Tool = "BuildingTool" 
+            chara.Humanoid:EquipTool(Backpack[Tool])
+   
+   
+   
+    
+    
+    wait(0.3)
+    
+local args = {
+    [1] = "WoodBlock",
+    [2] = Wood,
+    [3] = workspace[plrteam()],
+    [4] = CFrame.new(-49, 6.100000381469727, 94) * CFrame.Angles(-0, 0, -0),
+    [5] = true,
+    [6] = 1,
+    [7] = CFrame.new(-100.56568908691406, -11.899991989135742, -251.50686645507812) * CFrame.Angles(-0, 0, -0),
+    [8] = false
+}
+
+game:GetService("Players").LocalPlayer.Character.BuildingTool.RF:InvokeServer(unpack(args))
+
+local args = {
+    [1] = "WoodBlock",
+    [2] = Wood,
+    [3] = workspace[plrteam()],
+    [4] = CFrame.new(-51, 6.100000381469727, 94) * CFrame.Angles(-0, 0, -0),
+    [5] = true,
+    [6] = 1,
+    [7] = CFrame.new(-100.56568908691406, -11.899991989135742, -251.50686645507812) * CFrame.Angles(-0, 0, -0),
+    [8] = false
+}
+
+game:GetService("Players").LocalPlayer.Character.BuildingTool.RF:InvokeServer(unpack(args))
+
+local args = {
+    [1] = "WoodBlock",
+    [2] = Wood,
+    [3] = workspace[plrteam()],
+    [4] = CFrame.new(-49, 8.100000381469727, 94) * CFrame.Angles(-0, 0, -0),
+    [5] = true,
+    [6] = 1,
+    [7] = CFrame.new(-100.56568908691406, -11.899991989135742, -251.50686645507812) * CFrame.Angles(-0, 0, -0),
+    [8] = false
+}
+
+game:GetService("Players").LocalPlayer.Character.BuildingTool.RF:InvokeServer(unpack(args))
+
+local args = {
+    [1] = "WoodBlock",
+    [2] = Wood,
+    [3] = workspace[plrteam()],
+    [4] = CFrame.new(-49, 10.100000381469727, 94) * CFrame.Angles(-0, 0, -0),
+    [5] = true,
+    [6] = 1,
+    [7] = CFrame.new(-100.56568908691406, -11.899991989135742, -251.50686645507812) * CFrame.Angles(-0, 0, -0),
+    [8] = false
+}
+
+game:GetService("Players").LocalPlayer.Character.BuildingTool.RF:InvokeServer(unpack(args))
+
+local args = {
+    [1] = "WoodBlock",
+    [2] = Wood,
+    [3] = workspace[plrteam()],
+    [4] = CFrame.new(-49, 12.100000381469727, 94) * CFrame.Angles(-0, 0, -0),
+    [5] = true,
+    [6] = 1,
+    [7] = CFrame.new(-100.56568908691406, -11.899991989135742, -251.50686645507812) * CFrame.Angles(-0, 0, -0),
+    [8] = false
+}
+
+game:GetService("Players").LocalPlayer.Character.BuildingTool.RF:InvokeServer(unpack(args))
+
+local args = {
+    [1] = "WoodBlock",
+    [2] = Wood,
+    [3] = workspace[plrteam()],
+    [4] = CFrame.new(-51, 12.100000381469727, 94) * CFrame.Angles(-0, 0, -0),
+    [5] = true,
+    [6] = 1,
+    [7] = CFrame.new(-100.56568908691406, -11.899991989135742, -251.50686645507812) * CFrame.Angles(-0, 0, -0),
+    [8] = false
+}
+
+game:GetService("Players").LocalPlayer.Character.BuildingTool.RF:InvokeServer(unpack(args))
+
+local args = {
+    [1] = "WoodBlock",
+    [2] = Wood,
+    [3] = workspace[plrteam()],
+    [4] = CFrame.new(-47, 12.100000381469727, 94) * CFrame.Angles(-0, 0, -0),
+    [5] = true,
+    [6] = 1,
+    [7] = CFrame.new(-100.56568908691406, -11.899991989135742, -251.50686645507812) * CFrame.Angles(-0, 0, -0),
+    [8] = false
+}
+
+game:GetService("Players").LocalPlayer.Character.BuildingTool.RF:InvokeServer(unpack(args))
+
+---------------------------
+
+
+
+
+local args = {
+    [1] = "WoodBlock",
+    [2] = Wood,
+    [3] = workspace[plrteam()],
+    [4] = CFrame.new(-39, 6.100000381469727, 94) * CFrame.Angles(-0, 0, -0),
+    [5] = true,
+    [6] = 1,
+    [7] = CFrame.new(-92.56568908691406, -11.899991989135742, -251.50686645507812) * CFrame.Angles(-0, 0, -0),
+    [8] = false
+}
+
+game:GetService("Players").LocalPlayer.Character.BuildingTool.RF:InvokeServer(unpack(args))
+
+local args = {
+    [1] = "WoodBlock",
+    [2] = Wood,
+    [3] = workspace[plrteam()],
+    [4] = CFrame.new(-39, 8.100000381469727, 94) * CFrame.Angles(-0, 0, -0),
+    [5] = true,
+    [6] = 1,
+    [7] = CFrame.new(-92.56568908691406, -11.899991989135742, -251.50686645507812) * CFrame.Angles(-0, 0, -0),
+    [8] = false
+}
+
+game:GetService("Players").LocalPlayer.Character.BuildingTool.RF:InvokeServer(unpack(args))
+
+local args = {
+    [1] = "WoodBlock",
+    [2] = Wood,
+    [3] = workspace[plrteam()],
+    [4] = CFrame.new(-39, 10.100000381469727, 94) * CFrame.Angles(-0, 0, -0),
+    [5] = true,
+    [6] = 1,
+    [7] = CFrame.new(-92.56568908691406, -11.899991989135742, -251.50686645507812) * CFrame.Angles(-0, 0, -0),
+    [8] = false
+}
+
+game:GetService("Players").LocalPlayer.Character.BuildingTool.RF:InvokeServer(unpack(args))
+
+local args = {
+    [1] = "WoodBlock",
+    [2] = Wood,
+    [3] = workspace[plrteam()],
+    [4] = CFrame.new(-37, 6.100000381469727, 94) * CFrame.Angles(-0, 0, -0),
+    [5] = true,
+    [6] = 1,
+    [7] = CFrame.new(-92.56568908691406, -11.899991989135742, -251.50686645507812) * CFrame.Angles(-0, 0, -0),
+    [8] = false
+}
+
+game:GetService("Players").LocalPlayer.Character.BuildingTool.RF:InvokeServer(unpack(args))
+
+local args = {
+    [1] = "WoodBlock",
+    [2] = Wood,
+    [3] = workspace[plrteam()],
+    [4] = CFrame.new(-35, 6.100000381469727, 94) * CFrame.Angles(-0, 0, -0),
+    [5] = true,
+    [6] = 1,
+    [7] = CFrame.new(-88.56568908691406, -11.899991989135742, -251.50686645507812) * CFrame.Angles(-0, 0, -0),
+    [8] = false
+}
+
+game:GetService("Players").LocalPlayer.Character.BuildingTool.RF:InvokeServer(unpack(args))
+
+local args = {
+    [1] = "WoodBlock",
+    [2] = Wood,
+    [3] = workspace[plrteam()],
+    [4] = CFrame.new(-35, 8.100000381469727, 94) * CFrame.Angles(-0, 0, -0),
+    [5] = true,
+    [6] = 1,
+    [7] = CFrame.new(-88.56568908691406, -11.899991989135742, -251.50686645507812) * CFrame.Angles(-0, 0, -0),
+    [8] = false
+}
+
+game:GetService("Players").LocalPlayer.Character.BuildingTool.RF:InvokeServer(unpack(args))
+
+local args = {
+    [1] = "WoodBlock",
+    [2] = Wood,
+    [3] = workspace[plrteam()],
+    [4] = CFrame.new(-35, 10.100000381469727, 94) * CFrame.Angles(-0, 0, -0),
+    [5] = true,
+    [6] = 1,
+    [7] = CFrame.new(-88.56568908691406, -11.899991989135742, -251.50686645507812) * CFrame.Angles(-0, 0, -0),
+    [8] = false
+}
+
+game:GetService("Players").LocalPlayer.Character.BuildingTool.RF:InvokeServer(unpack(args))
+---------------------------
+
+
+
+
+local args = {
+    [1] = "WoodBlock",
+    [2] = Wood,
+    [3] = workspace[plrteam()],
+    [4] = CFrame.new(-27, 6.100000381469727, 93) * CFrame.Angles(-0, 0, -0),
+    [5] = true,
+    [6] = 1,
+    [7] = CFrame.new(-80.56568908691406, -11.899991989135742, -252.50686645507812) * CFrame.Angles(-0, 0, -0),
+    [8] = false
+}
+
+game:GetService("Players").LocalPlayer.Character.BuildingTool.RF:InvokeServer(unpack(args))
+
+local args = {
+    [1] = "WoodBlock",
+    [2] = Wood,
+    [3] = workspace[plrteam()],
+    [4] = CFrame.new(-27, 10.100000381469727, 93) * CFrame.Angles(-0, 0, -0),
+    [5] = true,
+    [6] = 1,
+    [7] = CFrame.new(-80.56568908691406, -11.899991989135742, -252.50686645507812) * CFrame.Angles(-0, 0, -0),
+    [8] = false
+}
+
+game:GetService("Players").LocalPlayer.Character.BuildingTool.RF:InvokeServer(unpack(args))
+
+local args = {
+    [1] = "WoodBlock",
+    [2] = Wood,
+    [3] = workspace[plrteam()],
+    [4] = CFrame.new(-29, 8.100000381469727, 93) * CFrame.Angles(-0, 0, -0),
+    [5] = true,
+    [6] = 1,
+    [7] = CFrame.new(-82.56568908691406, -11.899991989135742, -252.50686645507812) * CFrame.Angles(-0, 0, -0),
+    [8] = false
+}
+
+game:GetService("Players").LocalPlayer.Character.BuildingTool.RF:InvokeServer(unpack(args))
+
+-- Script generated by SimpleSpy - credits to exx#9394
+
+local args = {
+    [1] = "WoodBlock",
+    [2] = Wood,
+    [3] = workspace[plrteam()],
+    [4] = CFrame.new(-25, 6.100000381469727, 93) * CFrame.Angles(-0, 0, -0),
+    [5] = true,
+    [6] = 1,
+    [7] = CFrame.new(-78.56568908691406, -11.899991989135742, -252.50686645507812) * CFrame.Angles(-0, 0, -0),
+    [8] = false
+}
+
+game:GetService("Players").LocalPlayer.Character.BuildingTool.RF:InvokeServer(unpack(args))
+
+local args = {
+    [1] = "WoodBlock",
+    [2] = Wood,
+    [3] = workspace[plrteam()],
+    [4] = CFrame.new(-25, 8.100000381469727, 93) * CFrame.Angles(-0, 0, -0),
+    [5] = true,
+    [6] = 1,
+    [7] = CFrame.new(-78.56568908691406, -11.899991989135742, -252.50686645507812) * CFrame.Angles(-0, 0, -0),
+    [8] = false
+}
+
+game:GetService("Players").LocalPlayer.Character.BuildingTool.RF:InvokeServer(unpack(args))
+
+local args = {
+    [1] = "WoodBlock",
+    [2] = Wood,
+    [3] = workspace[plrteam()],
+    [4] = CFrame.new(-25, 10.100000381469727, 93) * CFrame.Angles(-0, 0, -0),
+    [5] = true,
+    [6] = 1,
+    [7] = CFrame.new(-78.56568908691406, -11.899991989135742, -252.50686645507812) * CFrame.Angles(-0, 0, -0),
+    [8] = false
+}
+
+game:GetService("Players").LocalPlayer.Character.BuildingTool.RF:InvokeServer(unpack(args))
+
+local args = {
+    [1] = "WoodBlock",
+    [2] = Wood,
+    [3] = workspace[plrteam()],
+    [4] = CFrame.new(-25, 12.100000381469727, 93) * CFrame.Angles(-0, 0, -0),
+    [5] = true,
+    [6] = 1,
+    [7] = CFrame.new(-78.56568908691406, -11.899991989135742, -252.50686645507812) * CFrame.Angles(-0, 0, -0),
+    [8] = false
+}
+
+game:GetService("Players").LocalPlayer.Character.BuildingTool.RF:InvokeServer(unpack(args))
+
+local args = {
+    [1] = "WoodBlock",
+    [2] = Wood,
+    [3] = workspace[plrteam()],
+    [4] = CFrame.new(-25, 14.100000381469727, 93) * CFrame.Angles(-0, 0, -0),
+    [5] = true,
+    [6] = 1,
+    [7] = CFrame.new(-78.56568908691406, -11.899991989135742, -252.50686645507812) * CFrame.Angles(-0, 0, -0),
+    [8] = false
+}
+
+game:GetService("Players").LocalPlayer.Character.BuildingTool.RF:InvokeServer(unpack(args))
+---------------------------
+
+
+
+
+local args = {
+    [1] = "WoodBlock",
+    [2] = Wood,
+    [3] = workspace[plrteam()],
+    [4] = CFrame.new(-17, 8.100000381469727, 93) * CFrame.Angles(-0, 0, -0),
+    [5] = true,
+    [6] = 1,
+    [7] = CFrame.new(-70.56568908691406, -11.899991989135742, -252.50686645507812) * CFrame.Angles(-0, 0, -0),
+    [8] = false
+}
+
+game:GetService("Players").LocalPlayer.Character.BuildingTool.RF:InvokeServer(unpack(args))
+
+local args = {
+    [1] = "WoodBlock",
+    [2] = Wood,
+    [3] = workspace[plrteam()],
+    [4] = CFrame.new(-17, 10.100000381469727, 93) * CFrame.Angles(-0, 0, -0),
+    [5] = true,
+    [6] = 1,
+    [7] = CFrame.new(-70.56568908691406, -11.899991989135742, -252.50686645507812) * CFrame.Angles(-0, 0, -0),
+    [8] = false
+}
+
+game:GetService("Players").LocalPlayer.Character.BuildingTool.RF:InvokeServer(unpack(args))
+
+local args = {
+    [1] = "WoodBlock",
+    [2] = Wood,
+    [3] = workspace[plrteam()],
+    [4] = CFrame.new(-17, 12.100000381469727, 93) * CFrame.Angles(-0, 0, -0),
+    [5] = true,
+    [6] = 1,
+    [7] = CFrame.new(-70.56568908691406, -11.899991989135742, -252.50686645507812) * CFrame.Angles(-0, 0, -0),
+    [8] = false
+}
+
+game:GetService("Players").LocalPlayer.Character.BuildingTool.RF:InvokeServer(unpack(args))
+
+local args = {
+    [1] = "WoodBlock",
+    [2] = Wood,
+    [3] = workspace[plrteam()],
+    [4] = CFrame.new(-15, 6.100000381469727, 93) * CFrame.Angles(-0, 0, -0),
+    [5] = true,
+    [6] = 1,
+    [7] = CFrame.new(-70.56568908691406, -11.899991989135742, -252.50686645507812) * CFrame.Angles(-0, 0, -0),
+    [8] = false
+}
+
+game:GetService("Players").LocalPlayer.Character.BuildingTool.RF:InvokeServer(unpack(args))
+
+local args = {
+    [1] = "WoodBlock",
+    [2] = Wood,
+    [3] = workspace[plrteam()],
+    [4] = CFrame.new(-15, 10.100000381469727, 93) * CFrame.Angles(-0, 0, -0),
+    [5] = true,
+    [6] = 1,
+    [7] = CFrame.new(-70.56568908691406, -11.899991989135742, -252.50686645507812) * CFrame.Angles(-0, 0, -0),
+    [8] = false
+}
+
+game:GetService("Players").LocalPlayer.Character.BuildingTool.RF:InvokeServer(unpack(args))
+
+local args = {
+    [1] = "WoodBlock",
+    [2] = Wood,
+    [3] = workspace[plrteam()],
+    [4] = CFrame.new(-15, 12.100000381469727, 93) * CFrame.Angles(-0, 0, -0),
+    [5] = true,
+    [6] = 1,
+    [7] = CFrame.new(-70.56568908691406, -11.899991989135742, -252.50686645507812) * CFrame.Angles(-0, 0, -0),
+    [8] = false
+}
+
+game:GetService("Players").LocalPlayer.Character.BuildingTool.RF:InvokeServer(unpack(args))
+
+
+local args = {
+    [1] = "WoodBlock",
+    [2] = Wood,
+    [3] = workspace[plrteam()],
+    [4] = CFrame.new(-13, 6.100000381469727, 93) * CFrame.Angles(-0, 0, -0),
+    [5] = true,
+    [6] = 1,
+    [7] = CFrame.new(-70.56568908691406, -11.899991989135742, -252.50686645507812) * CFrame.Angles(-0, 0, -0),
+    [8] = false
+}
+
+game:GetService("Players").LocalPlayer.Character.BuildingTool.RF:InvokeServer(unpack(args))
+
+local args = {
+    [1] = "WoodBlock",
+    [2] = Wood,
+    [3] = workspace[plrteam()],
+    [4] = CFrame.new(-13, 10.100000381469727, 93) * CFrame.Angles(-0, 0, -0),
+    [5] = true,
+    [6] = 1,
+    [7] = CFrame.new(-70.56568908691406, -11.899991989135742, -252.50686645507812) * CFrame.Angles(-0, 0, -0),
+    [8] = false
+}
+
+game:GetService("Players").LocalPlayer.Character.BuildingTool.RF:InvokeServer(unpack(args))
+
+local args = {
+    [1] = "WoodBlock",
+    [2] = Wood,
+    [3] = workspace[plrteam()],
+    [4] = CFrame.new(-13, 12.100000381469727, 93) * CFrame.Angles(-0, 0, -0),
+    [5] = true,
+    [6] = 1,
+    [7] = CFrame.new(-70.56568908691406, -11.899991989135742, -252.50686645507812) * CFrame.Angles(-0, 0, -0),
+    [8] = false
+}
+
+game:GetService("Players").LocalPlayer.Character.BuildingTool.RF:InvokeServer(unpack(args))
+
+OrionLib:MakeNotification({
+	Name = "Progress",
+	Content = "Finished Building!",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+local UsedWood = game.Players.LocalPlayer.Data.WoodBlock.Used.Value
+print(UsedWood)
+
+OrionLib:MakeNotification({
+	Name = "Info",
+	Content = "Used "..UsedWood.." Wood blocks",
+	Image = "rbxassetid://4483345998",
+	Time = 10
+})
+ for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+                if v:IsA'Tool' then
+                    v.Parent = game.Players.LocalPlayer.Backpack;
+                end;
+        end; 
+end
+
+
+
+
+
+
+
+
+
+
+
+
+local Tab = Window:MakeTab({
+	Name = "Quests",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+
+Tab:AddButton({
+	Name = "target quest",
+	Callback = function()
+local args = {
+    [1] = 2
+}
+
+workspace.QuestMakerEvent:FireServer(unpack(args))
+local chara = game.Players.LocalPlayer.Character
+            local origin = chara.HumanoidRootPart.CFrame
+wait(2)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace")[plrteam()].Quest.Target.Part.CFrame
+wait(1)
+local chara = game.Players.LocalPlayer.Character
+            local origin = chara.HumanoidRootPart.CFrame
+  	end    
+})
+
+
+
+
+Tab:AddButton({
+	Name = "thin ice quest",
+	Callback = function()
+local args = {
+    [1] = 9
+}
+
+workspace.QuestMakerEvent:FireServer(unpack(args))
+local chara = game.Players.LocalPlayer.Character
+            local origin = chara.HumanoidRootPart.CFrame
+wait(2)
+chara.HumanoidRootPart.CFrame = CFrame.new(-17.2441807, 22.4234791, 1359.83765, -0.850307524, -5.10061016e-09, 0.526286185, 1.99975903e-09, 1, 1.29226656e-08, -0.526286185, 1.20406858e-08, -0.850307524)
+        wait(0.5)
+chara.HumanoidRootPart.CFrame = CFrame.new(-50.8950272, 20.9255829, 2137.91357, -0.972867966, -3.05006544e-08, 0.231361046, -4.01606641e-08, 1, -3.70432751e-08, -0.231361046, -4.53298306e-08, -0.972867966)
+wait(0.5)
+chara.HumanoidRootPart.CFrame = CFrame.new(-45.670414, 25.2458458, 2909.57153, -0.90480876, 1.30821309e-09, 0.425818175, 1.16460681e-08, 1, 2.16741594e-08, -0.425818175, 2.45700775e-08, -0.90480876)
+wait(0.5)
+chara.HumanoidRootPart.CFrame = CFrame.new(-10.4901314, 37.6174622, 3677.06201, -0.978968859, -1.65246083e-09, -0.204009622, -7.44443229e-10, 1, -4.52760052e-09, 0.204009622, -4.28050617e-09, -0.978968859)
+wait(0.5)
+chara.HumanoidRootPart.CFrame = CFrame.new(-50.9394913, 30.8854847, 4449.0708, -0.989130974, -1.93212415e-08, -0.147037312, -1.73598913e-08, 1, -1.4622386e-08, 0.147037312, -1.19109025e-08, -0.989130974)
+wait(0.5)
+chara.HumanoidRootPart.CFrame = CFrame.new(-19.1005783, 60.6625443, 5219.69629, -0.963262498, -9.87095916e-08, 0.268561721, -7.70254331e-08, 1, 9.12784088e-08, -0.268561721, 6.72389859e-08, -0.963262498)
+wait(0.5)
+chara.HumanoidRootPart.CFrame = CFrame.new(-48.4247093, 11.0636272, 5987.90479, -0.994051278, -2.96921119e-08, -0.108913146, -3.38420065e-08, 1, 3.62543666e-08, 0.108913146, 3.97245365e-08, -0.994051278)
+wait(0.5)
+chara.HumanoidRootPart.CFrame = CFrame.new(-76.6527023, 38.4256821, 6760.96338, -0.989316583, 1.66555469e-09, -0.145783082, 3.0631635e-09, 1, -9.36242817e-09, 0.145783082, -9.70896341e-09, -0.989316583)
+wait(0.5)
+chara.HumanoidRootPart.CFrame = CFrame.new(-63.3461571, 40.3512268, 7527.07178, -0.99008441, -6.27901358e-08, -0.140473634, -4.77132645e-08, 1, -1.10696767e-07, 0.140473634, -1.02896685e-07, -0.99008441)
+wait(0.5)
+chara.HumanoidRootPart.CFrame = CFrame.new(-39.4213638, 43.9060669, 8296.41406, 0.817950964, 2.95945046e-08, -0.575287938, -7.49957891e-08, 1, -5.51869235e-08, 0.575287938, 8.82843736e-08, 0.817950964)
+wait(0.5)
+chara.HumanoidRootPart.CFrame = CFrame.new(-56.1324272, -359.141205, 9490.19336, -0.999418378, 0.0338956974, 0.0037424101, 0.033853177, 0.999367416, -0.0108940192, -0.004109303, -0.0107609909, -0.99993366)
+  	end    
+})
+
+Tab:AddButton({
+	Name = "cloud quest",
+	Callback = function()
+	    local chara = game.Players.LocalPlayer.Character
+            local origin = chara.HumanoidRootPart.CFrame
+            
+local args = {
+    [1] = 1
+}
+
+workspace.QuestMakerEvent:FireServer(unpack(args))
+
+wait(2)
+      	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace")[plrteam()].Quest.Cloud.Part2.CFrame
+      	wait(1)
+chara.HumanoidRootPart.CFrame = origin
+  	end    
+})
+
+Tab:AddButton({
+	Name = "ramp quest",
+	Callback = function()
+local args = {
+    [1] = 3
+}
+
+workspace.QuestMakerEvent:FireServer(unpack(args))
+local chara = game.Players.LocalPlayer.Character
+            local origin = chara.HumanoidRootPart.CFrame
+wait(2)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-204.711868, 57.7604332, 637.440796, 0.194487467, 8.51244906e-08, -0.980904996, -1.13564802e-08, 1, 8.45298942e-08, 0.980904996, -5.30037747e-09, 0.194487467) --yellow
+wait(0.1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(94.4861298, 62.5148773, 658.108826, -0.0793171749, 2.48156109e-08, 0.996849418, 5.72656977e-10, 1, -2.48484753e-08, -0.996849418, -1.40005818e-09, -0.0793171749) --pink
+wait(0.1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(97.1444092, 69.6508789, -73.1027374, -0.0828877762, -2.67131171e-08, 0.996558905, 1.0354209e-08, 1, 2.76665588e-08, -0.996558905, 1.26117987e-08, -0.0828877762) --red
+wait(0.1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-206.085129, 66.6880188, -77.5363617, 0.511189699, 5.61007596e-08, -0.859467924, -7.8608231e-10, 1, 6.48062866e-08, 0.859467924, -3.2452693e-08, 0.511189699) --black
+wait(0.1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(97.2251968, 66.1827164, 294.367401, -0.796652257, 5.48569865e-08, 0.604437888, 1.23224786e-09, 1, -8.91329179e-08, -0.604437888, -7.02631269e-08, -0.796652257) --blue
+wait(0.1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-48.4812737, 62.1871529, -223.282959, -0.950112283, 6.22774943e-09, -0.311908096, 1.31223876e-09, 1, 1.59693681e-08, 0.311908096, 1.4763395e-08, -0.950112283) --white
+wait(0.1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-205.607178, 71.5388794, 285.958466, 0.15931727, 3.77735532e-08, -0.98722744, -8.46683577e-08, 1, 2.45986094e-08, 0.98722744, 7.96679416e-08, 0.15931727) --green
+    wait(1)
+    chara.HumanoidRootPart.CFrame = origin
+  	end    
+})
+
+
+Tab:AddButton({
+	Name = "Find me quest",
+	Callback = function()
+local args = {
+    [1] = 4
+}
+
+workspace.QuestMakerEvent:FireServer(unpack(args))
+
+wait(1)
+local clickdetector = game:GetService("Workspace")[plrteam()].Quest.Butter.PPart.ClickDetector
+
+fireclickdetector(clickdetector)
+wait(2)
+local clickdetector = game:GetService("Workspace")[plrteam()].Quest.Butter.PPart.ClickDetector
+
+fireclickdetector(clickdetector)
+wait(2)
+local clickdetector = game:GetService("Workspace")[plrteam()].Quest.Butter.PPart.ClickDetector
+
+fireclickdetector(clickdetector)
+wait(2)
+local clickdetector = game:GetService("Workspace")[plrteam()].Quest.Butter.PPart.ClickDetector
+wait(2)
+fireclickdetector(clickdetector)
+local clickdetector = game:GetService("Workspace")[plrteam()].Quest.Butter.PPart.ClickDetector
+
+fireclickdetector(clickdetector)
+wait(2)
+local clickdetector = game:GetService("Workspace")[plrteam()].Quest.Butter.PPart.ClickDetector
+
+fireclickdetector(clickdetector)
+wait(2)
+local clickdetector = game:GetService("Workspace")[plrteam()].Quest.Butter.PPart.ClickDetector
+
+fireclickdetector(clickdetector)
+wait(2)
+local clickdetector = game:GetService("Workspace")[plrteam()].Quest.Butter.PPart.ClickDetector
+
+fireclickdetector(clickdetector)
+wait(2)
+local clickdetector = game:GetService("Workspace")[plrteam()].Quest.Butter.PPart.ClickDetector
+
+fireclickdetector(clickdetector)
+
+
+  	end    
+})
+
+
+Tab:AddButton({
+	Name = "soccer quest ",
+	Callback = function()
+local args = {
+    [1] = 8
+}
+
+workspace.QuestMakerEvent:FireServer(unpack(args))
+wait(1)
+
+game:GetService("Workspace")[plrteam()].Quest.Soccer1.SoccerBall.Size = Vector3.new(6,6,6)
+game:GetService("Workspace")[plrteam()].Quest.Soccer1.SoccerBall.Mesh.Scale = Vector3.new(6,6,6)
+OrionLib:MakeNotification({
+	Name = "Hey",
+	Content = "Now just push it into the goal",
+	Image = "rbxassetid://4483345998",
+	Time = 15
+})
+
+  	end    
+})
+
+
+
+local Tab = Window:MakeTab({
+	Name = "Trolling",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddToggle({
+	Name = "Spam request join all teams",
+	Default = (bool),
+	Callback = function(bool)
+		getgenv().SpamTeams = bool
+		print(bool)
+		if bool then
+		SpamTeams()
+		end
+	end    
+    
+})
+
+
+
+
+function SpamTeams()
+    while getgenv().SpamTeams == true do
+local args = {
+    [1] = game:GetService("Teams").black
+}
+
+workspace.ChangeTeam:FireServer(unpack(args))
+wait(1)
+
+local args = {
+    [1] = game:GetService("Teams").white
+}
+
+workspace.ChangeTeam:FireServer(unpack(args))
+
+wait(1)
+local args = {
+    [1] = game:GetService("Teams").blue
+}
+
+workspace.ChangeTeam:FireServer(unpack(args))
+wait(1)
+local args = {
+    [1] = game:GetService("Teams").green
+}
+
+workspace.ChangeTeam:FireServer(unpack(args))
+wait(1)
+local args = {
+    [1] = game:GetService("Teams").magenta
+}
+
+workspace.ChangeTeam:FireServer(unpack(args))
+wait(1)
+local args = {
+    [1] = game:GetService("Teams").red
+}
+
+workspace.ChangeTeam:FireServer(unpack(args))
+wait(1)
+local args = {
+    [1] = game:GetService("Teams").yellow
+}
+
+workspace.ChangeTeam:FireServer(unpack(args))
+end
+end
+
+local Tab = Window:MakeTab({
+	Name = "Random",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+
+Tab:AddToggle({
+	Name = "Auto join white team",
+	Default = (bool),
+	Callback = function(bool)
+		getgenv().SpamWhite = bool
+		print(bool)
+		if bool then
+		SpamWhite()
+		end
+	end    
+    
+})
+
+function SpamWhite()
+    while getgenv().SpamWhite == true do
+        wait()
+        local args = {
+    [1] = game:GetService("Teams").white
+}
+
+workspace.ChangeTeam:FireServer(unpack(args))
+    
 end
 end
