@@ -6245,6 +6245,31 @@ Tab:AddToggle({
     
 })
 
+
+
+local Tab = Window:MakeTab({
+	Name = "Discord",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "copy discord",
+	Callback = function()
+      		setclipboard("https://discord.gg/DZJW5YGKfM")
+      		OrionLib:MakeNotification({
+	Name = "Copied!",
+	Content = "Copied Discord link",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+  	end    
+})
+
+
+
+
+
 function SpamWhite()
     while getgenv().SpamWhite == true do
         wait()
@@ -6256,7 +6281,6 @@ workspace.ChangeTeam:FireServer(unpack(args))
     
 end
 end
-
 
 
            -- ADMIN SCRIPTS
